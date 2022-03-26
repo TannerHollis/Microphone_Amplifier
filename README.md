@@ -9,7 +9,9 @@ Op-Amps, or Operational Amplifiers, are used everywhere. At its core, it takes a
 
 ### Inverting Amplifier and Changing the Gain
 The most basic Op-Amp use is the inverting amplifier ([Inverting Operational Amplifier](https://www.electronics-tutorials.ws/opamp/opamp_2.html)) as shown below.
+
 ![Inverting Op-Amp](Images/inverting_opamp.gif)
+
 It is configurable so that the input can be scaled by a simple equation:
 
     Av = -Rf / Rin
@@ -87,9 +89,13 @@ It might seem odd that we don't set the MCP4151 wiper right away, but we are dea
 ## Schematic
 ![Microphone Amplifier Stage](Images/Amp_Stage.png)
 The microphone amplifier is simplified with a decoupling capacitor which fundamentally only allows AC voltage to pass through to the amplifier. The voltage offset is set by a resistor divider which is fed into a voltage follower, which outputs a VCC/2 output. The voltage follower essentially has a high impedance input and a low impedance output, eliminating any offset due to using a voltage divider circuit directly into the non-inverting Op-Amp input (this may seem abstract but a low impedance output is highly desirable in analog circuits. Inversely, a high impedance input is always desired).
+
 ![V/2 Stage](Images/Offset_Stage.png)
+
 The MCP4151 is as easy as following the datasheet for pins and connections.
+
 ![MCP 4151](Images/Digital_Pot.png)
+
 The rest are headers, one (J1) for an input header and the other (J2) for a RC filter selection.
 
 ### RC Filter
